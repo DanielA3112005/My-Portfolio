@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio with Tailwind CSS</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Cursor */
+    #cursor {
+      width: 20px;
+      height: 20px;
+      background: rgba(75, 85, 99, 0.5); /* Gray-500 */
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+  <div id="cursor"></div>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-white shadow-md z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold">My Portfolio</h1>
+      <ul class="flex space-x-4">
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#portfolio" class="hover:text-blue-500">Portfolio</a></li>
+        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+    <div class="text-center">
+      <h1 class="text-4xl font-extrabold mb-4">Welcome to My Portfolio</h1>
+      <p class="text-lg mb-6">I'm a web developer creating amazing experiences.</p>
+      <a href="#portfolio" class="px-6 py-3 bg-white text-blue-600 rounded-full font-medium hover:bg-gray-200 transition">View My Work</a>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">My Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white shadow-md rounded-md overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-lg">Project 1</h3>
+            <p class="text-gray-600">Description of Project 1.</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-md rounded-md overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Project 2" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-lg">Project 2</h3>
+            <p class="text-gray-600">Description of Project 2.</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-md rounded-md overflow-hidden">
+          <img src="https://via.placeholder.com/300x200" alt="Project 3" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="font-bold text-lg">Project 3</h3>
+            <p class="text-gray-600">Description of Project 3.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-lg text-gray-600">Hi, I'm [Your Name]. I specialize in front-end development and animations.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+      <form class="max-w-lg mx-auto space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500">
+        <input type="email" placeholder="Your Email" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500">
+        <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500"></textarea>
+        <button type="submit" class="w-full py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Tailwind and Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
